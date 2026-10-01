@@ -1,0 +1,365 @@
+/* CricketIQ: High-End Sports Analytics Design System */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+/* Global Reset & Typography */
+html, body, [class*="css"], [class*="st-"] {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #F3F4F6;
+}
+
+/* App Background */
+.stApp {
+    background: radial-gradient(circle at 10% 20%, #0F172A 0%, #070B14 100%);
+    background-attachment: fixed;
+}
+
+/* Sidebar Styling */
+section[data-testid="stSidebar"] {
+    background: rgba(11, 15, 25, 0.95) !important;
+    border-right: 1px solid rgba(255, 255, 255, 0.07) !important;
+    backdrop-filter: blur(20px);
+}
+
+section[data-testid="stSidebar"] div[data-testid="stRadio"] > div {
+    gap: 4px;
+}
+
+section[data-testid="stSidebar"] div[data-testid="stRadio"] label {
+    padding: 8px 12px !important;
+    border-radius: 8px !important;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    border: 1px solid transparent !important;
+    font-size: 0.88rem !important;
+    font-weight: 500 !important;
+    color: #94A3B8 !important;
+}
+
+section[data-testid="stSidebar"] div[data-testid="stRadio"] label:hover {
+    background: rgba(59, 130, 246, 0.08) !important;
+    color: #E2E8F0 !important;
+    border-color: rgba(59, 130, 246, 0.2) !important;
+}
+
+section[data-testid="stSidebar"] div[data-testid="stRadio"] label[data-checked="true"],
+section[data-testid="stSidebar"] div[data-testid="stRadio"] label:has(input:checked) {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(37, 99, 235, 0.1) 100%) !important;
+    color: #60A5FA !important;
+    border-color: rgba(96, 165, 250, 0.35) !important;
+    font-weight: 600 !important;
+    box-shadow: 0 4px 12px -2px rgba(59, 130, 246, 0.15);
+}
+
+/* Metric Cards */
+.cricketiq-card {
+    background: linear-gradient(145deg, rgba(30, 41, 59, 0.7) 0%, rgba(15, 23, 42, 0.8) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    padding: 1.15rem 1.35rem;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    margin-bottom: 0.85rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.cricketiq-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #3B82F6, transparent);
+    opacity: 0.4;
+}
+
+.cricketiq-card:hover {
+    border-color: rgba(96, 165, 250, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px -4px rgba(59, 130, 246, 0.12);
+}
+
+.card-title {
+    color: #94A3B8;
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.4rem;
+}
+
+.card-value {
+    color: #F8FAFC;
+    font-size: 1.85rem;
+    font-weight: 700;
+    line-height: 1.15;
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: -0.02em;
+}
+
+.card-subtitle {
+    color: #64748B;
+    font-size: 0.78rem;
+    font-weight: 500;
+    margin-top: 0.4rem;
+}
+
+/* Status Badges */
+.badge-improving {
+    background-color: rgba(16, 185, 129, 0.15);
+    color: #34D399;
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    padding: 3px 10px;
+    border-radius: 9999px;
+    font-weight: 600;
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+    display: inline-block;
+}
+
+.badge-declining {
+    background-color: rgba(239, 68, 68, 0.15);
+    color: #F87171;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    padding: 3px 10px;
+    border-radius: 9999px;
+    font-weight: 600;
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+    display: inline-block;
+}
+
+.badge-stable {
+    background-color: rgba(59, 130, 246, 0.15);
+    color: #60A5FA;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    padding: 3px 10px;
+    border-radius: 9999px;
+    font-weight: 600;
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+    display: inline-block;
+}
+
+.badge-volatile {
+    background-color: rgba(245, 158, 11, 0.15);
+    color: #FBBF24;
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    padding: 3px 10px;
+    border-radius: 9999px;
+    font-weight: 600;
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+    display: inline-block;
+}
+
+/* Sample Size Warning Banner */
+.sample-warning {
+    background: linear-gradient(90deg, rgba(245, 158, 11, 0.12) 0%, rgba(245, 158, 11, 0.04) 100%);
+    border-left: 4px solid #F59E0B;
+    border-radius: 0 8px 8px 0;
+    padding: 0.75rem 1rem;
+    color: #FDE68A;
+    font-size: 0.85rem;
+    margin: 0.75rem 0 1.25rem 0;
+}
+
+/* Tabs Styling */
+button[data-baseweb="tab"] {
+    background-color: transparent !important;
+    border-radius: 8px !important;
+    padding: 8px 16px !important;
+    font-weight: 500 !important;
+    font-size: 0.9rem !important;
+    color: #94A3B8 !important;
+    transition: all 0.2s ease !important;
+}
+
+button[data-baseweb="tab"]:hover {
+    color: #F8FAFC !important;
+    background-color: rgba(255, 255, 255, 0.04) !important;
+}
+
+button[data-baseweb="tab"][aria-selected="true"] {
+    color: #60A5FA !important;
+    background-color: rgba(59, 130, 246, 0.15) !important;
+    font-weight: 600 !important;
+}
+
+div[data-baseweb="tab-highlight"] {
+    background-color: #3B82F6 !important;
+    height: 3px !important;
+    border-radius: 3px !important;
+}
+
+/* Headers & Accents */
+h1 {
+    font-weight: 800 !important;
+    letter-spacing: -0.03em !important;
+    color: #F8FAFC !important;
+    margin-bottom: 0.25rem !important;
+}
+
+h2, h3 {
+    font-weight: 700 !important;
+    letter-spacing: -0.02em !important;
+    color: #F1F5F9 !important;
+}
+
+h4 {
+    font-weight: 600 !important;
+    color: #E2E8F0 !important;
+}
+
+hr {
+    border-color: rgba(255, 255, 255, 0.07) !important;
+    margin: 1.5rem 0 !important;
+}
+
+/* Tables Styling */
+div[data-testid="stDataFrame"] {
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 10px !important;
+    overflow: hidden !important;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    background: #0B0F19;
+}
+::-webkit-scrollbar-thumb {
+    background: #1E293B;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #334155;
+}
+
+/* Hide Streamlit default sidebar navigation completely */
+[data-testid="stSidebarNav"], 
+[data-testid="stSidebarNavItems"], 
+[data-testid="stSidebarNavSeparator"],
+div[data-testid="stSidebarNav"], 
+ul[data-testid="stSidebarNavItems"] {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+}
+
+/* Hero Section Banner */
+.hero-banner {
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.75) 0%, rgba(15, 23, 42, 0.95) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 1.4rem 1.75rem;
+    margin-bottom: 1.25rem;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-banner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100%;
+    background: radial-gradient(circle at right, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.hero-title {
+    font-size: 1.85rem;
+    font-weight: 800;
+    color: #F8FAFC;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.35rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.hero-subtitle {
+    font-size: 0.9rem;
+    color: #94A3B8;
+    line-height: 1.5;
+}
+
+/* Pill Tags */
+.pill-tag {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    margin-right: 6px;
+}
+
+.pill-blue { background: rgba(59, 130, 246, 0.2); color: #60A5FA; border: 1px solid rgba(59, 130, 246, 0.3); }
+.pill-green { background: rgba(16, 185, 129, 0.2); color: #34D399; border: 1px solid rgba(16, 185, 129, 0.3); }
+.pill-amber { background: rgba(245, 158, 11, 0.2); color: #FBBF24; border: 1px solid rgba(245, 158, 11, 0.3); }
+.pill-purple { background: rgba(168, 85, 247, 0.2); color: #C084FC; border: 1px solid rgba(168, 85, 247, 0.3); }
+.pill-gray { background: rgba(148, 163, 184, 0.15); color: #94A3B8; border: 1px solid rgba(148, 163, 184, 0.2); }
+
+/* Versus Matchup Card */
+.versus-container {
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.6) 0%, rgba(15, 23, 42, 0.8) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.versus-fighter {
+    flex: 1;
+}
+
+.versus-center {
+    padding: 0 1.5rem;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #EF4444;
+    text-shadow: 0 0 10px rgba(239, 68, 68, 0.5);
+}
+
+/* Leaderboard Rank Badges */
+.rank-badge-1 {
+    background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+    color: #111827;
+    font-weight: 800;
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+}
+
+.rank-badge-2 {
+    background: linear-gradient(135deg, #E2E8F0 0%, #94A3B8 100%);
+    color: #111827;
+    font-weight: 800;
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+}
+
+.rank-badge-3 {
+    background: linear-gradient(135deg, #B45309 0%, #78350F 100%);
+    color: #FEF3C7;
+    font-weight: 800;
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+}

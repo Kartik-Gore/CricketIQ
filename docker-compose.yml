@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  cricketiq:
+    build: .
+    container_name: cricketiq_app
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./data:/app/data
+      - ./models:/app/models
+    environment:
+      - CRICKETIQ_DATABASE_URL=sqlite:///data/processed/cricketiq.db
+      - CRICKETIQ_MIN_MATCHUP_SAMPLE=12
+      - CRICKETIQ_FORM_WINDOW=10
+      - CRICKETIQ_FORM_DECAY=0.05
+    restart: unless-stopped

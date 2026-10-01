@@ -1,0 +1,53 @@
+[2026-09-30 15:55:14] [WARNING] [CricketIQ:init_db:10] Dropping all existing database tables...
+[2026-09-30 15:55:14] [INFO] [CricketIQ:init_db:12] Creating database tables if not exist...
+[2026-09-30 15:55:14] [INFO] [CricketIQ:init_db:14] Database schema initialized successfully.
+[2026-09-30 15:55:14] [INFO] [CricketIQ:load:38] Extracting and ingesting Cricsheet archive from C:\Users\karti\Downloads\CRICKETIQ\data\raw\ipl_csv2.zip
+[2026-09-30 15:55:14] [INFO] [CricketIQ:load:55] Processing 300 matches from archive...
+[2026-09-30 15:55:15] [INFO] [CricketIQ:load:132] Ingested 71,681 deliveries across 300 matches.
+[2026-09-30 15:55:15] [INFO] [CricketIQ:clean_deliveries:125] Dropped 4 duplicate delivery rows.
+[2026-09-30 15:55:15] [INFO] [CricketIQ:map_columns:85] Mapped 1 columns: {'is_wicket': 'wicket'}
+[2026-09-30 15:55:43] [WARNING] [CricketIQ:init_db:10] Dropping all existing database tables...
+[2026-09-30 15:55:43] [INFO] [CricketIQ:init_db:12] Creating database tables if not exist...
+[2026-09-30 15:55:43] [INFO] [CricketIQ:init_db:14] Database schema initialized successfully.
+[2026-09-30 15:55:43] [INFO] [CricketIQ:load:38] Extracting and ingesting Cricsheet archive from C:\Users\karti\Downloads\CRICKETIQ\data\raw\ipl_csv2.zip
+[2026-09-30 15:55:43] [INFO] [CricketIQ:load:55] Processing 300 matches from archive...
+[2026-09-30 15:55:44] [INFO] [CricketIQ:load:132] Ingested 71,681 deliveries across 300 matches.
+[2026-09-30 15:55:44] [INFO] [CricketIQ:clean_deliveries:125] Dropped 4 duplicate delivery rows.
+[2026-09-30 15:55:44] [INFO] [CricketIQ:map_columns:85] Mapped 1 columns: {'is_wicket': 'wicket'}
+[2026-09-30 16:02:32] [WARNING] [CricketIQ:init_db:10] Dropping all existing database tables...
+[2026-09-30 16:02:32] [INFO] [CricketIQ:init_db:12] Creating database tables if not exist...
+[2026-09-30 16:02:32] [INFO] [CricketIQ:init_db:14] Database schema initialized successfully.
+[2026-09-30 16:02:32] [INFO] [CricketIQ:load:38] Extracting and ingesting Cricsheet archive from C:\Users\karti\Downloads\CRICKETIQ\data\raw\ipl_csv2.zip
+[2026-09-30 16:02:32] [INFO] [CricketIQ:load:55] Processing 300 matches from archive...
+[2026-09-30 16:02:33] [INFO] [CricketIQ:load:132] Ingested 71,681 deliveries across 300 matches.
+[2026-09-30 16:02:33] [INFO] [CricketIQ:clean_deliveries:125] Dropped 4 duplicate delivery rows.
+[2026-09-30 16:02:33] [INFO] [CricketIQ:map_columns:85] Mapped 1 columns: {'is_wicket': 'wicket'}
+[2026-09-30 16:06:53] [INFO] [CricketIQ:train_and_evaluate:63] Batting Model [Ridge]: MAE=15.63, RMSE=19.84, R2=0.094
+[2026-09-30 16:06:53] [INFO] [CricketIQ:train_and_evaluate:63] Batting Model [RandomForest]: MAE=15.30, RMSE=19.62, R2=0.114
+[2026-09-30 16:06:55] [INFO] [CricketIQ:train_and_evaluate:63] Batting Model [XGBoost]: MAE=15.39, RMSE=19.74, R2=0.103
+[2026-09-30 16:06:55] [INFO] [CricketIQ:save_model:27] Saved model batting_runs_model to C:\Users\karti\Downloads\CRICKETIQ\models\batting_runs_model.joblib
+[2026-09-30 16:06:55] [INFO] [CricketIQ:train_and_evaluate:59] Bowling Model [Ridge]: MAE=0.76, RMSE=0.95, R2=-0.037
+[2026-09-30 16:06:55] [INFO] [CricketIQ:train_and_evaluate:59] Bowling Model [RandomForest]: MAE=0.77, RMSE=0.96, R2=-0.060
+[2026-09-30 16:06:55] [INFO] [CricketIQ:train_and_evaluate:59] Bowling Model [XGBoost]: MAE=0.77, RMSE=0.96, R2=-0.060
+[2026-09-30 16:06:55] [INFO] [CricketIQ:save_model:27] Saved model bowling_wickets_model to C:\Users\karti\Downloads\CRICKETIQ\models\bowling_wickets_model.joblib
+[2026-09-30 16:06:59] [INFO] [CricketIQ:save_model:27] Saved model player_clusters to C:\Users\karti\Downloads\CRICKETIQ\models\player_clusters.joblib
+[2026-09-30 16:22:31] [INFO] [CricketIQ:map_columns:85] Mapped 3 columns: {'striker': 'batter', 'runs_off_bat': 'batter_runs', 'wicket_type': 'dismissal_kind'}
+[2026-09-30 16:56:35] [WARNING] [CricketIQ:init_db:10] Dropping all existing database tables...
+[2026-09-30 16:56:35] [INFO] [CricketIQ:init_db:12] Creating database tables if not exist...
+[2026-09-30 16:56:35] [INFO] [CricketIQ:init_db:14] Database schema initialized successfully.
+[2026-09-30 16:56:35] [INFO] [CricketIQ:load:38] Extracting and ingesting Cricsheet archive from C:\Users\karti\Downloads\CRICKETIQ\data\raw\ipl_csv2.zip
+[2026-09-30 16:56:35] [INFO] [CricketIQ:load:55] Processing 1244 matches from archive...
+[2026-09-30 16:56:39] [INFO] [CricketIQ:load:132] Ingested 591,464 deliveries across 1,243 matches.
+[2026-09-30 16:56:41] [INFO] [CricketIQ:clean_deliveries:125] Dropped 295781 duplicate delivery rows.
+[2026-09-30 16:56:41] [INFO] [CricketIQ:map_columns:85] Mapped 1 columns: {'is_wicket': 'wicket'}
+[2026-09-30 16:58:06] [INFO] [CricketIQ:train_and_evaluate:63] Batting Model [Ridge]: MAE=17.12, RMSE=22.85, R2=0.087
+[2026-09-30 16:58:08] [INFO] [CricketIQ:train_and_evaluate:63] Batting Model [RandomForest]: MAE=16.93, RMSE=22.83, R2=0.089
+[2026-09-30 16:58:10] [INFO] [CricketIQ:train_and_evaluate:63] Batting Model [XGBoost]: MAE=16.92, RMSE=22.82, R2=0.089
+[2026-09-30 16:58:10] [INFO] [CricketIQ:save_model:27] Saved model batting_runs_model to C:\Users\karti\Downloads\CRICKETIQ\models\batting_runs_model.joblib
+[2026-09-30 16:58:10] [INFO] [CricketIQ:train_and_evaluate:59] Bowling Model [Ridge]: MAE=0.76, RMSE=0.95, R2=-0.013
+[2026-09-30 16:58:11] [INFO] [CricketIQ:train_and_evaluate:59] Bowling Model [RandomForest]: MAE=0.76, RMSE=0.95, R2=-0.024
+[2026-09-30 16:58:11] [INFO] [CricketIQ:train_and_evaluate:59] Bowling Model [XGBoost]: MAE=0.76, RMSE=0.95, R2=-0.023
+[2026-09-30 16:58:11] [INFO] [CricketIQ:save_model:27] Saved model bowling_wickets_model to C:\Users\karti\Downloads\CRICKETIQ\models\bowling_wickets_model.joblib
+[2026-09-30 16:58:19] [INFO] [CricketIQ:save_model:27] Saved model player_clusters to C:\Users\karti\Downloads\CRICKETIQ\models\player_clusters.joblib
+[2026-09-30 16:58:43] [INFO] [CricketIQ:map_columns:85] Mapped 3 columns: {'striker': 'batter', 'runs_off_bat': 'batter_runs', 'wicket_type': 'dismissal_kind'}
+[2026-09-30 17:43:32] [INFO] [CricketIQ:map_columns:85] Mapped 3 columns: {'striker': 'batter', 'runs_off_bat': 'batter_runs', 'wicket_type': 'dismissal_kind'}

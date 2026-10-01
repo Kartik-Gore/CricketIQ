@@ -1,0 +1,61 @@
+{
+  "batting_runs_model": {
+    "model_name": "batting_runs_model",
+    "version": "1.0.0",
+    "target": "bat_runs",
+    "features": [
+      "prior_bat_avg",
+      "prior_strike_rate",
+      "recent_form_5",
+      "recent_sr_5",
+      "innings"
+    ],
+    "metrics": {
+      "MAE": 16.92,
+      "RMSE": 22.82,
+      "R2": 0.089
+    },
+    "training_date": "2026-09-30 16:58:10",
+    "artifact_path": "models\\batting_runs_model.joblib"
+  },
+  "bowling_wickets_model": {
+    "model_name": "bowling_wickets_model",
+    "version": "1.0.0",
+    "target": "wickets",
+    "features": [
+      "prior_econ",
+      "recent_wkts_5",
+      "recent_econ_5"
+    ],
+    "metrics": {
+      "MAE": 0.76,
+      "RMSE": 0.95,
+      "R2": -0.013
+    },
+    "training_date": "2026-09-30 16:58:11",
+    "artifact_path": "models\\bowling_wickets_model.joblib"
+  },
+  "player_clusters": {
+    "model_name": "player_clusters",
+    "version": "1.0.0",
+    "target": "archetype_cluster",
+    "features": [
+      "Run Scoring",
+      "Strike Rotation",
+      "Boundary Ability",
+      "Powerplay Skill",
+      "Middle-Overs Skill",
+      "Death Skill",
+      "Pace Skill",
+      "Spin Skill",
+      "Pressure Skill",
+      "Consistency"
+    ],
+    "metrics": {
+      "silhouette_score": 0.27,
+      "davies_bouldin": 1.544
+    },
+    "training_date": "2026-09-30 16:58:19",
+    "artifact_path": "models\\player_clusters.joblib"
+  }
+}
